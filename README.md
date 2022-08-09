@@ -7,21 +7,21 @@
 
 URL: http://localhost:9021/clusters
 
-### Crear la DB "testdb", la tabla "test" y su secuencia en Informix
+### Crear la DB "testdb", la tabla "test", "test_increm" y sus secuencias en Informix
 
 ` docker-compose exec informix bash -c '/docker-entrypoint-initdb.d/esquema.sh' `
 
-### Registrar kafka Source y Sink connectors con el container connect.
+### Registrar kafka Source y Sink connectors desde el container connect.
 
 ` docker-compose exec connect bash -c '/docker-entrypoint-initdb.d/connectors.sh' `
 
-### Nota: esto crea un conector de origen (Informix) y un conector receptor (PostgreSQL).
+### Nota: esto crea dos conectores de origen (Informix) y dos conectores receptores (PostgreSQL).
 
-### Conectarse a la DB de Informix para insertar los registros en la tabla "test"
+### Conectarse a la DB de Informix para insertar los registros en la tabla "test" y "test_increm"
 
 ` docker-compose exec informix bash -c '/docker-entrypoint-initdb.d/insert.sh' `
 
-### Conectarse a la DB de PostgreSQL y verificar que se haya generado la tabla y los registros insertados en la DB de Informix.
+### Conectarse a la DB de PostgreSQL y verificar que se hayan generado la tablas y los registros insertados en la DB de Informix.
 
 ` docker-compose exec postgres bash -c '/docker-entrypoint-initdb.d/select' `
 
