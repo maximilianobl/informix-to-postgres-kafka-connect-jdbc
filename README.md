@@ -5,7 +5,7 @@
 
 ### Ingresar a Control Center para visualizar las configuraciones y los mensajes del Topic
 
-[Confluent - Control Center][http://localhost:9021/clusters]
+URL: http://localhost:9021/clusters
 
 ### Crear la DB "testdb", la tabla "test" y su secuencia en Informix
 
