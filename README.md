@@ -1,3 +1,6 @@
+![descarga](https://user-images.githubusercontent.com/4389095/189141187-8cf9280f-b0e2-4abb-9e3e-2c0fb0d03a06.png)
+
+
 # Pasos para demo de replica de una db INFORMIX hacia una db PostgreSQL
 ### Iniciar los containers.
 
